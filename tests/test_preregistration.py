@@ -1,3 +1,4 @@
+from research_agent.preregistration.experiment_gate import ExperimentGate
 from  research_agent.preregistration.models import (
     PreRegistration,
     ResearchQuestion,
@@ -75,3 +76,6 @@ print(
     "Integrity:",
     registry.verify("PR-001")
 )
+
+gate = ExperimentGate(registry)
+gate.authorize(prereg.preregistration_id)
