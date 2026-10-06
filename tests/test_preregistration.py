@@ -1,3 +1,4 @@
+from research_agent.experiment.runner import ExperimentRunner
 from research_agent.preregistration.experiment_gate import ExperimentGate
 from  research_agent.preregistration.models import (
     PreRegistration,
@@ -79,3 +80,9 @@ print(
 
 gate = ExperimentGate(registry)
 gate.authorize(prereg.preregistration_id)
+
+runner = ExperimentRunner(gate)
+
+result = runner.run(prereg.preregistration_id)
+
+print("Experiment Result: ", result)
