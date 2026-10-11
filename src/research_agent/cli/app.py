@@ -22,7 +22,6 @@ WELCOME = (
 
 
 class AutomlApp(App):
-    """Full-screen, opencode-style interface for the research agent."""
 
     CSS = APP_CSS
     TITLE = "automl"

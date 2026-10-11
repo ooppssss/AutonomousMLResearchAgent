@@ -42,8 +42,7 @@ def run_tui() -> None:
 )
 @click.pass_context
 def cli(ctx: click.Context) -> None:
-    """automl - an opencode-style terminal CLI for ML research agents.
-
+    """
     Run without a command to open the interactive interface.
     """
     if ctx.invoked_subcommand is None:
